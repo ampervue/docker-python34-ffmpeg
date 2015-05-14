@@ -93,6 +93,7 @@ RUN cd /usr/local/bin \
 	&& ln -s python3 python \
 	&& ln -s python-config3 python-config
 
+RUN pip install -U pip
 
 WORKDIR /usr/local/src
 
