@@ -48,7 +48,6 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
     libpq-dev \
     libpng-dev \
     libssl-dev \
-    libswscale-dev \
     libtheora-dev \
     libtiff4-dev \
     libtool \
@@ -60,7 +59,6 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
     openssl \
     pkg-config \
     postgresql-client \
-    v4l-utils \
     wget \
     unzip; \
     apt-get clean
