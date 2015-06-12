@@ -59,6 +59,7 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
     openssl \
     pkg-config \
     postgresql-client \
+    supervisor \
     wget \
     unzip; \
     apt-get clean
