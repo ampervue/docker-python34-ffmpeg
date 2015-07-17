@@ -26,7 +26,7 @@ RUN apt-get -qq remove ffmpeg
 # remove several traces of python
 RUN apt-get purge -y python.*
 
-# Add the following two dependencies if you want to use --enable-gnutls in FFPMEG: gnutls-bin libgnutls-dev
+# Add the following two dependencies if you want to use --enable-gnutls in FFPMEG: gnutls-bin
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /etc/apt/sources.list; \
     apt-get update -qq && apt-get install -y --force-yes \
     ant \
@@ -45,6 +45,7 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
     libfaac-dev \
     libjpeg-dev \
     libjasper-dev \
+    libgnutls-dev \
     libmp3lame-dev \
     libpq-dev \
     libpng-dev \
