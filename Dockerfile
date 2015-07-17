@@ -26,6 +26,7 @@ RUN apt-get -qq remove ffmpeg
 # remove several traces of python
 RUN apt-get purge -y python.*
 
+# Add the following two dependencies if you want to use --enable-gnutls in FFPMEG: gnutls-bin libgnutls-dev
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /etc/apt/sources.list; \
     apt-get update -qq && apt-get install -y --force-yes \
     ant \
@@ -190,6 +191,7 @@ RUN ./configure --extra-libs="-ldl" \
             --enable-libx264 \
             --enable-libx265 \
             --enable-nonfree \
+            --enable-openssl \
     && make -j ${NUM_CORES} \
     && make install
 # =================================
