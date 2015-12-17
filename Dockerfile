@@ -22,6 +22,11 @@ ENV PYTHON_VERSION 3.4.3
 ENV YASM_VERSION    1.3.0
 ENV NUM_CORES 4
 
+RUN locale-gen en_US.UTF-8  
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8 
+
 RUN apt-get -qq remove ffmpeg
 # remove several traces of python
 RUN apt-get purge -y python.*
@@ -204,3 +209,8 @@ WORKDIR /usr/local/
 RUN rm -rf /usr/local/src
 # =================================
 
+# Setup a working directory to allow for
+# docker run --rm -ti -v ${PWD}:/code ...
+# =======================================
+RUN mkdir /work
+WORKDIR /work

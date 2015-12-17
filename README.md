@@ -16,7 +16,10 @@ Source and example: https://github.com/ampervue/docker-python34-ffmpeg
 
 ~~~~
 docker pull dkarchmervue/python34-ffmpeg
-docker run -ti dkarchmervue/python34-ffmpeg ffmpeg
+docker run --rm -ti dkarchmervue/python34-ffmpeg ffmpeg -version
+docker run --rm -ti -v ${PWD}:/work dkarchmervue/python34-ffmpeg ffmpeg -i in.mp4 ...
+docker run --rm -ti -v ${PWD}:/work dkarchmervue/python34-ffmpeg python your-mscript.py
+docker run --rm -ti dkarchmervue/python34-ffmpeg bash
 ~~~~
 
 ## Example
