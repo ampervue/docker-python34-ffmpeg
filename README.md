@@ -2,6 +2,10 @@
 
 A Docker image running Ubuntu:trusty with Python 3.4 and latest FFMPEG (built from source)
 
+## Python 3.5
+
+Use newer https://github.com/ampervue/docker-ffmpeg
+
 ### To Build
 
 ~~~~
