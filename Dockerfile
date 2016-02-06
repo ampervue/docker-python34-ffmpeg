@@ -120,5 +120,4 @@ RUN rm -rf /usr/local/src
 # Setup a working directory to allow for
 # docker run --rm -ti -v ${PWD}:/code ...
 # =======================================
-RUN mkdir /work
 WORKDIR /work
